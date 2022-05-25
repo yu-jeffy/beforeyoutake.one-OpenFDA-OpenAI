@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>beforeyoutake.one by Jeffy Yu</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" type= "text/css" href="/static/styles/styles.css" />
+		<script src="/static/assets/js/home.js"></script>
+	</head>
+	<body>
+
+		<div>
+
+			<h1 id="pageTitle"><a href="/">beforeyoutake.one</a></h1>
+			<p>A search tool that finds information for a drug. Data is provided by the Federal Drug and Food Administration's OpenFDA API. Descriptions are parsed from the data and produced by the text-davinci-002 engine from the OpenAI GPT-3 model. </p>
+
+			<form method="POST" id="form" role="userForm" action= "/getInfo/">
+					<h2 >Enter Drug Name:</h2>
+					<input type="text" id="inputDrugName" name="inputDrugName" autocomplete="off">
+					<button type="button">Submit</button>
+			</form>
+				{% if outputResponse %}				<h2> Results for: {{drugName}}</h2>
+
+
+			<textarea name="outputText" id="outputText" rows="12" cols="100">{{outputResponse}}</textarea>			{% endif %}
+
+			<h3>
+				Purpose and Mission:
+			</h3>
+			<p>
+				As medical professionals, prescribers are constantly making cost-benefit analysis regarding the potential benefits and downsides of a certain medication for patients.
+				However, treatment is never a guarantee for a cure. Age, gender, genetics, and many other aspects of life are uncontrollable.
+				It is at the discretion of the physician to provide care to the best of their ability, but human error and pharmaceutical marketing has caused a severe clouding of this judgement.
+				<br> <br>
+				Overprescribing, in general health care and specific cases, is an issue that adversely affects the quality of life and health of millions of Americans.
+				This issue is often overlooked as the rapid provision of medication for symptom alleviation is often prioritized over adverse effects and long term health implications.
+				<br> <br>
+				In 2018, 46% of a half a million of outpatient antibiotic prescriptions were written without any diagnosis of infection.
+				In 2019, among the top 10 most frequently prescribed medication classes for US adults, four were found for mass overprescribing.
+				These included medications such as opioids for chronic pain, proton pump inhibitors for indigestion, levothyroxine for subclinical hypothyroidism, and antidepressants for subsyndromal levels of depression,
+				all of which have severe adverse reactions that can be life debilitating or ending if taking improperly or by the improper patient.
+				<br>
+
+				<br>
+				<br>
+				These problems also adversely affect certain groups, where older adults over age 65 take five or more medications, often resulting in adverse drug effects that compounding
+				to the patient suffering already caused by the original disease being treated.
+				<br> <br>
+				insert health problems
+				insert cost
+				<br> <br>
+				However, due to lax prescribing guidelines, lack of longitudinal studies on adverse effects, and aggressive marketing tactics by pharmaceutical companies, the medical system has widely neglected due diligence in dispensing prescriptions.
+				These three issues are at the core of this problem.
+				<br> <br>
+				In combination with these compounding influences, patients often do not perform their own research about medications they take.
+				These chemicals and substances have profound and significant effects on the systems vital for human functioning everyday.
+				It is imparative that patients are fully educated to make proper decisions about their treatment plan. The reasoning is twofold:
+				First, only the patient truly understands their ailments and health as they are the only individual able to experience their sickness.
+				If they are not knowledgeable about the substances used for treatment, it may be impossible to establish relationships between the administration
+				of the medication and changes in symptomology. Second, though health care professionals, especially doctors and certified physicians, are
+				among the most trusted and intelligent members of the community, they are all still human.
+				This is not to say that the medical community is untrustworthy by any means, but rather that mistakes unfortunately do occur.
+				Therefore information provided by a physician should be taken as <b>medical advice</b> and not instruction.
+				When making decisions that have major effects on your health, especially when condsidering medications that may alter how the brain works,
+				it is always necessary to perform your own research and seek opinions from multiple medical professionals, preferrably providers that
+				specialize in the ailments at hand.
+				<br> <br>
+				A written prescription is not an obligation.
+				<br> <br>
+				So take a second to think, before you take one.
+				<br>
+
+
+
+			</p>
+			<p>
+				Sources: <br>
+				https://www.aoa.org/news/clinical-eye-care/public-health/case-study-on-overprescribing?sso=y <br>
+				https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6731049/ <br>
+				https://www.statnews.com/2019/04/02/overprescribed-americas-other-drug-problem/ <br>
+				https://www.tctmd.com/news/adhd-drug-overprescribing-raises-concerns-over-future-cv-events <br>
+				https://nida.nih.gov/drug-topics/opioids/opioid-overdose-crisis <br>
+
+
+			</p>
+
+		</div>
+
+
+	</body>
+</html>

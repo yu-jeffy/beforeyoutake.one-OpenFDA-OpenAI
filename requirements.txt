@@ -1,0 +1,7 @@
+gunicorn
+wheel
+Flask
+requests
+datetime
+requests
+openai
